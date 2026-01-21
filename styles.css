@@ -1,0 +1,122 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background: url(wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s fade;
+    align-content: center;
+    text-align: center;
+    justify-items: center;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.quiz, .main {
+    background: rgba(250, 250, 250, 0.64);
+    width: 50%;
+    max-width: 65%;
+    padding: 20px;
+    border-radius: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-align: center;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.hidden { display: none; }
+
+.flag {
+    width: 35vh;
+    margin: 20px 0;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #2b4a2e;
+    color: white;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: #416a45;
+    transform: scale(1.05) translateY(-2px);
+}
+
+.timer {
+    color: #a50001;
+    font-size: 1.2rem;
+}
+.logo {
+    width: 25vh;
+    transition: 0.2s ease;
+}
+.logo:hover {
+    transform: scale(1.03);
+    transition: 0.2s ease
+}
+select, input {
+    background-color: rgba(221, 221, 221, 0.69);
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    display: inline-block;
+    margin: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: rgba(201, 201, 201, 0.48);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+input {
+    width: 5vh;
+}
+* {
+    outline: none;
+}
+.header {
+    background-color: rgba(186, 186, 186, 0.64);
+    padding: 2vw;
+    border-radius: 1rem;
+}
+nav {
+    display: flex;
+}
+nav a {
+    padding: 0 10px 0 10px;
+}
+a {
+    text-decoration: none;
+    color: #0d0d0d;
+    transition: 0.2s ease;
+}
+a:hover {
+    transition: 0.2s ease;
+    color: #035082;
+}
+.active {
+    color: #035082;
+    font-weight: 600;
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Myster Flags - Free Flag Quiz</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="logo.svg" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="title" content="MysterFlags" />
+        <meta name="description" content="Test your knowledge of countries' flags!" />
+        <meta property="og:title" content="MysterFlags" />
+        <meta property="og:description" content="Test your knowledge of countries' flags!" />
+        <meta property="og:image" content="logo.svg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="MysterFlags" />
+        <meta name="twitter:description" content="Test your knowledge of countries' flags!" />
+        <meta name="twitter:image" content="logo.svg" />
+        <meta property="og:type" content="website" />
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <div class="header">
+            <nav>
+                <a href="#" class="active">Quiz</a>
+                <a href="about.html" target="_self">About Us</a>
+            </nav>
+        </div>
+        <div class="quiz">
+            <div id="start">
+                <img class="logo" src="logo.svg" alt="MysterFlags Logo" />
+                <h1>MysterFlags</h1>
+                <h2>Test your knowledge of countries' flags!</h2>
+                <div class="choices">
+                <label>Questions:</label><br />
+                <input id="count" type="number" value="10" min="5" max="50" placeholder="1-50" /><br /><br />
+
+                <label>Region:</label><br />
+                <select id="region">
+                    <option value="All">Whole World</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Oceania">Oceania</option></select
+                ><br /><br />
+                </div>
+                <button onclick="startQuiz()">Start Quiz</button>
+                <p> </p>
+                <p>Made by Jo7ico</p>
+            </div>
+
+            <div id="quiz" class="hidden">
+                <div class="timer">Time: <span id="time">30</span>s</div>
+                <img id="flag" class="flag" />
+                <div class="options"></div>
+            </div>
+
+            <div id="result" class="hidden">
+                <h2>Score: <span id="score"></span></h2>
+                <button onclick="location.reload()">Restart</button>
+            </div>
+        </div>
+    </body>
+</html>
