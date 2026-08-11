@@ -548,3 +548,82 @@ body.light-mode .review-item {
 .info-img {
   height: 650px;
 }
+
+.faq {
+  background: #000;
+  border: 1px solid #050505;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  overflow: clip;
+  transition: 0.3s ease;
+  width: 1000px;
+}
+
+.faq input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.question {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  cursor: pointer;
+  user-select: none;
+}
+.question:focus-visible {
+  box-shadow: rgba(0, 0, 0, 0.86) 0 8px 24px;
+}
+.q-text {
+  display: inline-block;
+  font-family: "Courier New", monospace;
+}
+
+.caret {
+  width: 22px;
+  height: 22px;
+  display: inline-grid;
+  place-items: center;
+  transition: transform 0.25s ease;
+}
+.caret::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  opacity: 0.8;
+}
+
+.answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.28s ease;
+}
+.answer > div {
+  overflow: hidden;
+}
+.content {
+  padding: 0 20px 0;
+  color: #9aa1aa;
+}
+
+input:checked ~ .answer {
+  grid-template-rows: 1fr;
+}
+input:checked ~ .answer .content {
+  padding: 0 20px 18px;
+}
+
+input:checked ~ label .caret {
+  transform: rotate(180deg);
+}
+
+.faq:hover {
+  box-shadow: rgba(0, 0, 0, 0.86) 0 8px 24px;
+  transition: 0.3s ease;
+}
