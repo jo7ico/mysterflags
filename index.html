@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MysterFlags - Free Flag Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="logo.svg" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="title" content="MysterFlags" />
+    <meta
+      name="description"
+      content="Test your knowledge of countries' flags!"
+    />
+    <meta property="og:title" content="MysterFlags" />
+    <meta
+      property="og:description"
+      content="Test your knowledge of countries' flags!"
+    />
+    <meta property="og:image" content="logo.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MysterFlags" />
+    <meta
+      name="twitter:description"
+      content="Test your knowledge of countries' flags!"
+    />
+    <meta name="twitter:image" content="logo.svg" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#2e3d2a" />
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="reveal.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="index.html">
+            <img src="logo.svg" alt="Mysterflags logo" />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="https://www.jojico.com/about" class="about-link">About</a>
+          <a href="https://www.jojico.com/projects" class="projects-link"
+            >View other quizzes</a
+          >
+          <a href="https://www.jojico.com/contact" class="contact-link"
+            >Contact</a
+          >
+          <a href="https://www.jojico.com" class="jojico-link"
+            >Creator's main site</a
+          >
+        </nav>
+        <label class="switch" data-tooltip="Toggle light mode">
+          <input type="checkbox" onclick="toggleDarkMode()" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Master your knowledge on flags with</p>
+          <h1 class="title">Mysterflags</h1>
+          <p class="subtitle">By Jo7ico</p>
+        </div>
+      </section>
+
+      <div class="quiz-board">
+        <div id="start" class="screen-card">
+          <img src="logo.svg" class="logo-mark" />
+          <p class="intro-copy">
+            Test your knowledge of countries' flags below.
+          </p>
+
+          <div class="controls-grid">
+            <label class="field-label" for="count">Questions</label>
+            <input
+              id="count"
+              type="number"
+              value="10"
+              min="5"
+              max="197"
+              placeholder="1-197"
+            />
+
+            <label class="field-label" for="region">Region</label>
+            <select id="region">
+              <option value="All">Whole World</option>
+              <option value="Europe">Europe</option>
+              <option value="Asia">Asia</option>
+              <option value="East Asia">East Asia</option>
+              <option value="Southeast Asia">Southeast Asia</option>
+              <option value="Middle East">Middle East</option>
+              <option value="Arab World">Arab World</option>
+              <option value="Africa">Africa</option>
+              <option value="Americas">Americas</option>
+              <option value="Latin America">Latin America</option>
+              <option value="Oceania">Oceania</option>
+              <option value="Post Soviet States">Post Soviet States</option>
+              <option value="Former British Colonies">
+                Former British Colonies
+              </option>
+            </select>
+          </div>
+
+          <button class="primary-button" onclick="startQuiz()">
+            Start Quiz
+          </button>
+          <p class="credit">Made by Jo7ico</p>
+        </div>
+
+        <div id="quiz" class="screen-card hidden quiz-stage">
+          <div class="quiz-topbar">
+            <div class="timer">Time: <span id="time">30</span>s</div>
+            <div class="question-counter" id="questionCounter">1 / 10</div>
+          </div>
+          <div class="flag-frame">
+            <img id="flag" class="flag" alt="Quiz flag" loading="eager" />
+          </div>
+          <div class="options"></div>
+        </div>
+
+        <div id="result" class="screen-card hidden result-card">
+          <h2>Quiz Results</h2>
+          <h2>Score: <span id="score"></span></h2>
+          <div id="review" class="review-list"></div>
+          <button class="primary-button" onclick="location.reload()">
+            Restart
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <p class="scrolltip">Scroll down for more info.</p>
+
+    <section class="info">
+      <h2>Master Flag Knowledge.</h2>
+
+      <div class="video">
+        <video autoplay muted loop playsinline class="video-gif">
+          <source src="master-flag-knowledge.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <h2>Your forever-free passport to flag mastery.</h2>
+      <img src="passport.png" class="info-img" />
+      <h2>Choose the region with up to 197 questions.</h2>
+      <div class="video">
+        <video autoplay muted loop playsinline class="video-gif">
+          <source src="choices.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <h2>Completely free to use with no signups/logins required.</h2>
+      <h2>Try other quizzes leading you to a genius.</h2>
+      <button
+        class="primary-button"
+        onclick="window.location.href = 'https://www.jojico.com/projects'"
+      >
+        View more Jo7ico's creations
+      </button>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="logo">
+          <a href="index.html">
+            <img src="logo.svg" alt="Mysterflags logo" />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="https://jojico.com/about" class="about-link">About</a>
+          <a href="https://jojico.com/projects" class="projects-link"
+            >View other quizzes</a
+          >
+          <a href="https://www.jojico.com/contact" class="contact-link"
+            >Contact</a
+          >
+          <a href="https://www.jojico.com" class="jojico-link"
+            >Creator's main site</a
+          >
+        </nav>
+        <span class="footer-copy"
+          >Built by Jo7ico With Care • © 2026 Jo7ico. All rights reserved.</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
