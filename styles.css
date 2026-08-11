@@ -627,3 +627,12 @@ input:checked ~ label .caret {
   box-shadow: rgba(0, 0, 0, 0.86) 0 8px 24px;
   transition: 0.3s ease;
 }
+
+.faq-section {
+  margin-top: 5em;
+  display: grid;
+  gap: 2rem;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
