@@ -636,3 +636,7 @@ input:checked ~ label .caret {
   align-items: center;
   justify-content: center;
 }
+
+body.light-mode .faq {
+  background: #fff;
+}
