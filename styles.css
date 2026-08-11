@@ -638,5 +638,5 @@ input:checked ~ label .caret {
 }
 
 body.light-mode .faq {
-  background: #fff;
+  background: #f1f1f1;
 }
