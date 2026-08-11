@@ -5,7 +5,7 @@
 
   const revealTargets = Array.from(
     document.querySelectorAll(
-      "h1, h2, h3, h4, h5, button, p, a, input, select, textarea, .reveal-target",
+      "h1, h2, h3, h4, h5, button, p, a, input, select, textarea, .reveal-target, img, video, article, footer",
     ),
   );
 
